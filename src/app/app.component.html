@@ -13,7 +13,7 @@
       <section>
         <h5>訂閱電子報</h5>
         <div formGroupName="subscription">
-          <mat-checkbox [checked]="checkAll" [indeterminate]="indeterminateSubscription" (change)="subscribeAllChange($event)">全部</mat-checkbox>
+          <mat-checkbox [indeterminate]="indeterminateSubscription" formControlName="checkboxAll">全部</mat-checkbox>
           <mat-checkbox *ngFor="let sub of newsletterList" [formControlName]="sub.id">
             {{ sub.name }}
           </mat-checkbox>
